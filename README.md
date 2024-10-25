@@ -1,4 +1,4 @@
-# Project Title
+# Data Analysis Projects
 
 A brief description of what this project does and who it's for.
 
@@ -14,4 +14,4 @@ A brief description of what this project does and who it's for.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/Albety/DataAnalysisProjects.git
