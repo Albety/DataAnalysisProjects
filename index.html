@@ -3,68 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun Fact Generator</title>
+    <title>Select a Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* Global Styles */
         body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f6fa;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        /* Card Styles */
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Card Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Card Content */
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h2 {
+            font-size: 1.5rem;
             color: #333;
             margin: 0;
         }
-        .container {
-            text-align: center;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            max-width: 400px;
-        }
-        h1 {
-            color: #ff7e5f;
-        }
-        #fact {
-            margin: 20px 0;
-            font-size: 1.2em;
+        .card-content p {
+            font-size: 1rem;
             color: #666;
+            margin: 0.5rem 0 1rem;
         }
-        button {
-            padding: 10px 20px;
-            background-color: #ff7e5f;
+        .card-content .project-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Link Button Styling */
+        .select-button {
+            background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s;
         }
-        button:hover {
-            background-color: #feb47b;
+        .select-button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Fun Fact Generator</h1>
-        <p id="fact">Press the button to get a fun fact!</p>
-        <button onclick="generateFact()">Get a Fun Fact</button>
+        <h1>Select Project</h1>
+        <div class="grid">
+            <!-- Project Option 1 -->
+            <div class="project-card">
+                <div class="card-content">
+                    <h2>Project One</h2>
+                    <p>A data analytics project involving a deep dive into visualization techniques using Python and SQL.</p>
+                    <div class="project-details">
+                        <span><i class="fas fa-database"></i> Data Analytics</span>
+                        <a href="https://github.com/Albety/DataAnalysisProjects/blob/main/Working%20with%20matplotlb.ipynb" class="select-button" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Option 2 -->
+            <div class="project-card">
+                <div class="card-content">
+                    <h2>Project Two</h2>
+                    <p>A machine learning project focusing on predictive modeling and deploying models.</p>
+                    <div class="project-details">
+                        <span><i class="fas fa-brain"></i> Machine Learning</span>
+                        <a href="https://github.com/Albety/DataAnalysisProjects/blob/main/SalesDataAnalysisProject/SalesDataProject.ipynb" class="select-button" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Option 3 -->
+            <div class="project-card">
+                <div class="card-content">
+                    <h2>Project Three</h2>
+                    <p>Explore DevOps practices and CI/CD pipelines in this hands-on project.</p>
+                    <div class="project-details">
+                        <span><i class="fas fa-tools"></i> DevOps</span>
+                        <a href="https://example.com/project-three" class="select-button" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Option 4 -->
+            <div class="project-card">
+                <div class="card-content">
+                    <h2>Project Four</h2>
+                    <p>Discover quantitative research methods and data processing strategies in this project.</p>
+                    <div class="project-details">
+                        <span><i class="fas fa-chart-line"></i> Quant Research</span>
+                        <a href="https://example.com/project-four" class="select-button" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <script>
-        const facts = [
-            "Bananas are berries, but strawberries aren’t!",
-            "Honey never spoils and can last thousands of years.",
-            "The Eiffel Tower can be 15 cm taller during the summer.",
-            "Octopuses have three hearts!",
-            "A day on Venus is longer than a year on Venus."
-        ];
-
-        function generateFact() {
-            const randomIndex = Math.floor(Math.random() * facts.length);
-            document.getElementById("fact").innerText = facts[randomIndex];
-        }
-    </script>
 </body>
 </html>
