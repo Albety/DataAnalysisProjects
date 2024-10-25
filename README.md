@@ -2,7 +2,7 @@
 
 A brief description of what this project does and who it's for.
 
-[https://albety.github.io/DataAnalysisProjects/](#Projects)
+[Projects](https://albety.github.io/DataAnalysisProjects/)
 
 
 ## Table of Contents
