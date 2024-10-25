@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Fact Generator</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            max-width: 400px;
+        }
+        h1 {
+            color: #ff7e5f;
+        }
+        #fact {
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #666;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #feb47b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Fact Generator</h1>
+        <p id="fact">Press the button to get a fun fact!</p>
+        <button onclick="generateFact()">Get a Fun Fact</button>
+    </div>
+
+    <script>
+        const facts = [
+            "Bananas are berries, but strawberries aren’t!",
+            "Honey never spoils and can last thousands of years.",
+            "The Eiffel Tower can be 15 cm taller during the summer.",
+            "Octopuses have three hearts!",
+            "A day on Venus is longer than a year on Venus."
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById("fact").innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
