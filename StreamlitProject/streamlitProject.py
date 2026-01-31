@@ -15,7 +15,7 @@ if name:
 
 
 data = {
-    "Name": ["John", "Jane", "Jake", "Jill"],
+    "Name": ["John", "Jane", "Jake", "Jilli"],
     "Age": [28, 24, 35, 40],
     "City": ["New York", "Los Angeles", "Chicago", "Houston"]
 }
