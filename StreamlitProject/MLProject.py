@@ -1,4 +1,4 @@
-import streamlit as st
+acimport streamlit as st
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
@@ -26,6 +26,6 @@ input_date = [[sepal_length, sepal_width, petal_length, petal_width],]
 prediction = model.predict(input_date)
 predicted_species = target_names[prediction[0]]
 
-st.write("Prediction")
+st.write("Prediction ")
 st.write(f"The predicted species is: {predicted_species}")
 
